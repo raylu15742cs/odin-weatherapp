@@ -19,7 +19,8 @@ async function getWeather(city) {
             let weather = document.createElement("h3")
             weather.innerHTML = response.weather[0].main;
             let temp = document.createElement("h2")
-            temp.innerHTML = `${response.main.temp}&#8457`;
+            let tempvalue = Math.round(response.main.temp)
+            temp.innerHTML = `${tempvalue}&#8457`;
             
             leftside.appendChild(weather)
             leftside.appendChild(temp)
@@ -27,7 +28,8 @@ async function getWeather(city) {
             let rightside = document.createElement('div')
 
             let feelslike = document.createElement('p')
-            feelslike.innerHTML = `FEELS LIKE : ${response.main.feels_like}&#8457`
+            feelslikevalue = Math.round(response.main.feels_like)
+            feelslike.innerHTML = `FEELS LIKE : ${feelslikevalue}&#8457`
             let wind= document.createElement('p');
             wind.innerHTML = `WIND : ${response.wind.speed}MPH`;
             let humidity = document.createElement('p');

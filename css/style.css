@@ -33,13 +33,18 @@ h2 {
 
 h3 {
     font-size: 25px;
+    margin: 0;
 }
 input {
     color: black;
     padding: 8px;
-    margin: 8px;
+    margin: 8px 0;
 }
 form {
     position: absolute;
     right: 0;
+}
+button {
+    padding: 8px;
+    color: black;
 }

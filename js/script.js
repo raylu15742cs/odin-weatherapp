@@ -45,8 +45,13 @@ async function getWeather(city) {
 }
 
 let inputlistener = document.getElementById("cityname")
-inputlistener.addEventListener("onsubmit", function() {
-    console.log("hi")
+inputlistener.addEventListener("click", function(e) {
+    e.preventDefault();
+    let inputinside = document.getElementById("citynameinside")
+    let maindiv = document.getElementById("main-content")
+    maindiv.innerHTML = ""
+    getWeather(inputinside.value)
+    inputinside.value = ""
 })
 
 getWeather('Rosemead')

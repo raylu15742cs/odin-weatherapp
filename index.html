@@ -8,8 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <input id="cityname" type="text" placeholder="Search City">
+    <form onkeypress="return event.keyCode != 13">
+        <input id="citynameinside" type="input" placeholder="Search City">
+        <button id="cityname"> Submit</button>
     </form>
     <div id="main-content"></div>
     <script src="js/script.js"></script>
